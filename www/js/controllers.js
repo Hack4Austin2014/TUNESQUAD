@@ -45,7 +45,7 @@ angular.module('starter.controllers', [])
 		Confidence: 0
 	};
 	$scope.getStarClass = function(starBool) {
-		return starBool? 'redstar.png': 'actuallywhitestar.png'
+		return starBool? 'redstar.png': 'whitestar.png'
 	};
   $scope.lesson = Lessons.get($stateParams.lessonId);
   console.log('ReportCtrl');
