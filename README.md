@@ -1,4 +1,6 @@
-KING.Alpha
+TEAM #TUNESQUAD
 ==========
 
-Kids in a New Groove - Team Alpha
+Kids in a New Groove - #TUNESQUAD
+
+Glossy deliverable demo.
