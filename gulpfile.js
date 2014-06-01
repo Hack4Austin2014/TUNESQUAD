@@ -1,4 +1,3 @@
-var http = require('http');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var bower = require('bower');
@@ -7,7 +6,6 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
-var livereload = require('gulp-livereload');
 
 var paths = {
   sass: ['./scss/**/*.scss']
@@ -27,12 +25,8 @@ gulp.task('sass', function(done) {
     .on('end', done);
 });
 
-gulp.task('watch', ['serve'], function() {
-  var server = livereload();
+gulp.task('watch', function() {
   gulp.watch(paths.sass, ['sass']);
-  gulp.watch("./www/**/*").on('change', function(file) {
-      server.changed(file.path);
-  })
 });
 
 gulp.task('install', ['git-check'], function() {
@@ -40,19 +34,6 @@ gulp.task('install', ['git-check'], function() {
     .on('log', function(data) {
       gutil.log('bower', gutil.colors.cyan(data.id), data.message);
     });
-});
-
-gulp.task('serve', function(next) {
-  var express = require('express');
-  console.log(1);
-  var serveStatic = require('serve-static');
-  console.log(2);
-  var app = express();
-  console.log(3)
-  app.use(serveStatic('www/'));
-  console.log(4)
-  app.listen(process.env.PORT || 8080, next);
-  console.log(5)
 });
 
 gulp.task('git-check', function(done) {
