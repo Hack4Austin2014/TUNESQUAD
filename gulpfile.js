@@ -44,15 +44,10 @@ gulp.task('install', ['git-check'], function() {
 
 gulp.task('serve', function(next) {
   var express = require('express');
-  console.log(1);
   var serveStatic = require('serve-static');
-  console.log(2);
   var app = express();
-  console.log(3)
   app.use(serveStatic('www/'));
-  console.log(4)
   app.listen(process.env.PORT || 8080, next);
-  console.log(5)
 });
 
 gulp.task('git-check', function(done) {
