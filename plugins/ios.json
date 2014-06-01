@@ -22,6 +22,11 @@
                         }
                     ]
                 }
+            },
+            "../../plugins/pro.fing.cordova.gapreload/gapreload.xml": {
+                "parents": {
+                    "/*": []
+                }
             }
         }
     },

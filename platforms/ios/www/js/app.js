@@ -67,10 +67,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     })
 
     .state('tab.report', {
-      url: "/report",
+      url: "/report/:lessonId",
       views: {
         'tab-home': {
-          templateUrl: "templates/tab-report.html"
+          templateUrl: "templates/tab-report.html",
+          controller: "ReportCtrl"
         }
       }
     });
