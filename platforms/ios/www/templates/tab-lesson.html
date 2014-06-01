@@ -1,40 +1,41 @@
 <ion-view title="Lesson">
   <ion-content class="padding">
-  	<!-- Modal asking if a guardian is present -->
+  	<!-- Modal asking if a guardian is present ? -->
     <div class="card">
       <div class="item">
-        <p>{{lesson.name}} - {{lesson.instrument}} - {{lesson.time}}</p>
+        <h2>{{lesson.name}} - {{lesson.instrument}} - {{lesson.time}}</h2>
       </div>
       <div class="item">
       	<p>Assignment</p>
       	<ul>
       	  <li>
       	    <input type="checkbox" name="assignment-1" id="assignment-1">
-      	    <label for="piece-1">Minuet in G</label>
+      	    <label for="assignment-1">Minuet in G</label>
       	  </li>
       	  <li>
       	    <input type="checkbox" name="assignment-2" id="assignment-2">
-      	    <label for="piece-2">Scales: G, E#</label>
+      	    <label for="assignment-2">Scales: G, E#</label>
       	  </li>
       	  <li>
       	    <input type="checkbox" name="assignment-3" id="assignment-3">
-      	    <label for="piece-3">Piece 3</label>
+      	    <label for="assignment-3">Piece 3</label>
       	  </li>
       	</ul>
       </div>
       <div class="item">
       	<p>New Assignment</p>
       	<ul>
+          <li ng-repeat="e in newAssignments">
+            <input type="checkbox" name="piece-{{$index}}" id="piece-{{$index}}">
+            <label for="piece-{{$index}}">{{e}}</label>
+          </li>
+          <hr>
       	  <li>
-      	  	<input type="checkbox" name="piece-1" id="piece-1">
-      	  	<label for="piece-1">Piece 1</label>
-  	  	  </li>
-      	  <li><div class="row">
-      	  	<input type="checkbox" name="" id=""><div class="col-66"><input type="text" name="new-assignment-label" id="new-assignment-label" placeholder="  Beethoven's 5th"></div>
-      	  	<div class="col"><a href="#" class="button button-small">Add</a></div>
-      	  </div></li>
+      	  	<input ng-model="newAssignmentInput" ng-keypress="newAssignmentInput = $event.keyCode" type="text" placeholder="  ex: Beethoven's 5th">
+      	  </li>
       	</ul>
       </div>
+      <a href="#/tab/report/{{lesson.id}}" class="button button-block button-calm">Proceed to Report</a>
     </div>
   </ion-content>
 </ion-view>
