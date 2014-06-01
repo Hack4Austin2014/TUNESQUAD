@@ -12,6 +12,7 @@ angular.module('starter.controllers', [])
   $scope.lesson = Lessons.get($stateParams.lessonId);
   console.log('LessonCtrl');
 })
-.controller('ReportCtrl', function($scope) {
+.controller('ReportCtrl', function($scope, $stateParams, Lessons) {
+  $scope.lesson = Lessons.get($stateParams.lessonId);
   console.log('ReportCtrl');
 });

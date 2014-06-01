@@ -1,0 +1,31 @@
+<ion-view title="Report">
+  <ion-content class="padding">
+    <div class="card">
+      <div class="item">
+        <h2>{{lesson.name}} - {{lesson.instrument}}</h2>
+      </div>
+      <div class="item">
+        <div class="row">
+          <div class="col-50"><h3>Preparedness</h3></div>
+          <div class="col"><input type="range" name="preparedness" id="preparedness"></div>
+        </div>
+        <hr>
+          <div class="row">
+            <div class="col-50"><h3>Mood</h3></div>
+            <div class="col"><input type="range" name="mood" id="mood"></div>
+          </div>
+        <hr>
+          <div class="row">
+            <div class="col-50"><h3>Behavior</h3></div>
+            <div class="col"><input type="range" name="behavior" id="behavior"></div>
+          </div>
+        <hr>
+          <div class="row">
+            <div class="col-50"><h3>Confidence</h3></div>
+            <div class="col"><input type="range" name="confidence" id="confidence"></div>
+          </div>
+      </div>
+      <a href="#submit" class="button button-block button-assertive">Submit Lesson &amp; Report</a>
+    </div>
+  </ion-content>
+</ion-view>
