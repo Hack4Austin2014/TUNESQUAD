@@ -1,0 +1,40 @@
+<ion-view title="Lesson">
+  <ion-content class="padding">
+  	<!-- Modal asking if a guardian is present -->
+    <div class="card">
+      <div class="item">
+        <p>{{lesson.name}} - {{lesson.instrument}} - {{lesson.time}}</p>
+      </div>
+      <div class="item">
+      	<p>Assignment</p>
+      	<ul>
+      	  <li>
+      	    <input type="checkbox" name="assignment-1" id="assignment-1">
+      	    <label for="piece-1">Minuet in G</label>
+      	  </li>
+      	  <li>
+      	    <input type="checkbox" name="assignment-2" id="assignment-2">
+      	    <label for="piece-2">Scales: G, E#</label>
+      	  </li>
+      	  <li>
+      	    <input type="checkbox" name="assignment-3" id="assignment-3">
+      	    <label for="piece-3">Piece 3</label>
+      	  </li>
+      	</ul>
+      </div>
+      <div class="item">
+      	<p>New Assignment</p>
+      	<ul>
+      	  <li>
+      	  	<input type="checkbox" name="piece-1" id="piece-1">
+      	  	<label for="piece-1">Piece 1</label>
+  	  	  </li>
+      	  <li><div class="row">
+      	  	<input type="checkbox" name="" id=""><div class="col-66"><input type="text" name="new-assignment-label" id="new-assignment-label" placeholder="  Beethoven's 5th"></div>
+      	  	<div class="col"><a href="#" class="button button-small">Add</a></div>
+      	  </div></li>
+      	</ul>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
