@@ -1,7 +1,8 @@
 <ion-view title="Today">
   <ion-content class="padding">
-    <ion-list class="list-inset">
-      <ion-item ng-repeat="lesson in lessons" type="item-text-wrap" href="#/tab/lesson/{{lesson.id}}">
+    <img src="/img/amp-top.png" style="width: 100%;"></img>
+    <ion-list class="">
+      <ion-item ng-repeat="lesson in lessons" style="margin: 10px 18px;" type="item-text-wrap" href="#/tab/lesson/{{lesson.id}}">
         <h2>{{lesson.name}}</h2> <h3>{{ lesson.time | date:'short' }}</h3>
       </ion-item>
     </ion-list>
