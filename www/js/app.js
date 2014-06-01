@@ -56,6 +56,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
     })
+    .state('tab.guardian', {
+      url: "/guardian/:lessonId",
+      views: {
+        'tab-home': {
+          templateUrl: "templates/tab-guardian.html",
+          controller: "GuardianCtrl"
+        }
+      }
+    })
+
     .state('tab.lesson', {
       url: "/lesson/:lessonId",
       views: {

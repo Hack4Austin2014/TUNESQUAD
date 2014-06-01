@@ -6455,9 +6455,6 @@ a.button {
   font-weight: normal;
   font-style: normal; }
 
-h1, h2, h3, h4, h5, h6, body {
-  font-family: 'Bebas Neue', 'Helvetica Neue', helvetica, sans-serif; }
-
 .container {
   max-height: 100%;
   max-width: 100%; }
@@ -6467,3 +6464,11 @@ h1, h2, h3, h4, h5, h6, body {
 
 .list {
   margin: -7px 18px; }
+
+a.item-content {
+  background-color: #F1BB30 !important;
+  border: #F1BB30 !important; }
+
+.white {
+  color: #F8F4EB !important;
+  font-weight: bold; }

@@ -8,6 +8,12 @@ angular.module('starter.controllers', [])
   $scope.date = Date;
   console.log('TodayCtrl');
 })
+.controller('GuardianCtrl', function($scope, $stateParams, Lessons) {
+  $scope.lessons = Lessons.all();
+  $scope.lesson = Lessons.get($stateParams.lessonId);
+  $scope.date = Date;
+  console.log('GuardianCtrl');
+})
 .controller('LessonCtrl', function($scope, $stateParams, Lessons) {
 	$scope.newAssignments = ['first'];
 	$scope.newAssignmentInput = {value:''};

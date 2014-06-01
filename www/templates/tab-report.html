@@ -5,7 +5,6 @@
         <h2>{{lesson.name}} - {{lesson.instrument}}</h2>
       </div>
       <div class="item">
-<<<<<<< HEAD
         <div class="row">
           <div class="col-50"><h3>Preparedness</h3></div>
           <div class="col"><input type="range" name="preparedness" id="preparedness" min="1" max="5" step="1" ></div>
@@ -24,19 +23,7 @@
           <div class="row">
             <div class="col-50"><h3>Confidence</h3></div>
             <div class="col"><input type="range" name="confidence" id="confidence" min="1" max="5" step="1" ></div>
-=======
-        <div ng-repeat="(k,v) in report">
-          <div class="row">
-            <div class="col-50"><h3>{{k}}</h3></div>
-            <div class="col">
-              <span ng-repeat="i in getStarArray(5,v) track by $index" ng-click="report[k] = $index+1">
-                <span class="{{getStarClass(i, v)}}"></span>
-              </span>
-            </div>
->>>>>>> 6e17691a58f1469b81e9e01ae34a30059766b8d4
           </div>
-          <hr style="{{$last?'display:none;':''}}">
-        </div>
       </div>
       <a href="#submit" class="button button-block button-assertive">Submit Lesson &amp; Report</a>
     </div>
