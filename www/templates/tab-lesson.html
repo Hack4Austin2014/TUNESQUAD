@@ -1,40 +1,50 @@
-<ion-view title="Lesson">
-  <ion-content class="padding">
-    <div class="card" style="margin:-6px 18px;">
-      <div class="item">
-        <h2>{{lesson.name}} - {{lesson.instrument}} - {{lesson.time}}</h2>
+<ion-view title="Lesson - {{lesson.name}} - {{lesson.instrument}}" style="background-color:#6B605A;">
+  <ion-content class="padding" style="background-color:#6B605A;">
+    <br>
+    <div class="card" style="margin:-6px 18px; background-color:#6B605A;">
+      <div style="border:8px solid #F1BB30; border-radius:20px; background-color:#F1BB30;">
+        <div class="item" style="border:2px solid #F8F4EB; border-radius:12px; background-color:#F1BB30;">
+          <p style="color:#F8F4EB">Assignment</p>
+          <ul>
+            <li>
+              <input type="checkbox" name="assignment-1" id="assignment-1">
+              <label for="assignment-1" style="color:#B54526">Minuet in G</label>
+            </li>
+            <li>
+              <input type="checkbox" name="assignment-2" id="assignment-2">
+              <label for="assignment-2" style="color:#B54526">Scales: G, E#</label>
+            </li>
+            <li>
+              <input type="checkbox" name="assignment-3" id="assignment-3">
+              <label for="assignment-3" style="color:#B54526">Piece 3</label>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="item">
-      	<p>Assignment</p>
-      	<ul>
-      	  <li>
-      	    <input type="checkbox" name="assignment-1" id="assignment-1">
-      	    <label for="assignment-1">Minuet in G</label>
-      	  </li>
-      	  <li>
-      	    <input type="checkbox" name="assignment-2" id="assignment-2">
-      	    <label for="assignment-2">Scales: G, E#</label>
-      	  </li>
-      	  <li>
-      	    <input type="checkbox" name="assignment-3" id="assignment-3">
-      	    <label for="assignment-3">Piece 3</label>
-      	  </li>
-      	</ul>
+      <br>
+      <div style="border:8px solid #6DBBC4; border-radius:20px; background-color:#6DBBC4;">
+        <div class="item" style="border:2px solid #F8F4EB; border-radius:12px; background-color:#6DBBC4;">
+          <p style="color:#F8F4EB;">Next Lesson</p>
+          <input type="date" name="next-lesson" id="next-lesson">
+        </div>
       </div>
-      <div class="item" style="border:4px double #">
-      	<p>New Assignment</p>
-      	<ul>
-          <li ng-repeat="e in newAssignments">
-            <input type="checkbox" name="piece-{{$index}}" id="piece-{{$index}}">
-            <label for="piece-{{$index}}">{{e}}</label>
-          </li>
-          <hr>
-      	  <li>
-      	  	<form name="asdf">
-            <input ng-model="newAssignmentInput.value" ng-keypress="handleKeypress($event.keyCode)" type="text" placeholder="  ex: Beethoven's 5th">  
-            </form>
-      	  </li>
-      	</ul>
+      <br>
+      <div style="border:8px solid #B54526; border-radius:20px; background-color:#B54526;">
+        <div class="item" style="border:2px solid #F8F4EB; border-radius:12px; background-color:#B54526; color:#F8F4EB">
+          <p style="color:#F8F4EB">New Assignment</p>
+          <ul>
+            <li ng-repeat="e in newAssignments">
+              <input type="checkbox" name="piece-{{$index}}" id="piece-{{$index}}">
+              <label for="piece-{{$index}}">{{e}}</label>
+            </li>
+            <hr>
+            <li>
+              <form name="asdf">
+              <input ng-model="newAssignmentInput.value" ng-keypress="handleKeypress($event.keyCode)" type="text" placeholder="  ex: Beethoven's 5th">  
+              </form>
+            </li>
+          </ul>
+        </div>
       </div>
       <a href="#/tab/report/{{lesson.id}}" class="button button-block button-calm">Proceed to Report</a>
     </div>
