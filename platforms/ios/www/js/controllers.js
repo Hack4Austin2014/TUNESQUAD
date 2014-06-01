@@ -9,6 +9,7 @@ angular.module('starter.controllers', [])
   console.log('TodayCtrl');
 })
 .controller('LessonCtrl', function($scope, $stateParams, Lessons) {
+	$scope.newAssignments = ["first","second"];
   $scope.lesson = Lessons.get($stateParams.lessonId);
   console.log('LessonCtrl');
 })

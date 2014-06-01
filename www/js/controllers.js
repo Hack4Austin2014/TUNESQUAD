@@ -9,6 +9,14 @@ angular.module('starter.controllers', [])
   console.log('TodayCtrl');
 })
 .controller('LessonCtrl', function($scope, $stateParams, Lessons) {
+	$scope.newAssignments = ['first'];
+	$scope.newAssignmentInput = {value:''};
+	$scope.handleKeypress = function(keycode) {
+		if (keycode === 13) {
+			$scope.newAssignments.push($scope.newAssignmentInput.value);
+			$scope.newAssignmentInput.value = '';
+		};
+	}
   $scope.lesson = Lessons.get($stateParams.lessonId);
   console.log('LessonCtrl');
 })

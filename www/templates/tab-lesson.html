@@ -25,13 +25,15 @@
       <div class="item">
       	<p>New Assignment</p>
       	<ul>
+          <li ng-repeat="e in newAssignments">
+            <input type="checkbox" name="piece-{{$index}}" id="piece-{{$index}}">
+            <label for="piece-{{$index}}">{{e}}</label>
+          </li>
+          <hr>
       	  <li>
-      	  	<input type="checkbox" name="piece-1" id="piece-1">
-      	  	<label for="piece-1">Piece 1</label>
-  	  	  </li>
-  	  	  <hr>
-      	  <li>
-      	  	<input type="text" placeholder="  ex: Beethoven's 5th">
+      	  	<form name="asdf">
+            <input ng-model="newAssignmentInput.value" ng-keypress="handleKeypress($event.keyCode)" type="text" placeholder="  ex: Beethoven's 5th">  
+            </form>
       	  </li>
       	</ul>
       </div>
